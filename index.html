@@ -38,6 +38,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="./static/js/lazy.js"></script>
 </head>
 <body>
 
@@ -73,7 +74,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2402.18065"
+                <a href="./static/assets/SMPPI.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -92,7 +93,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=EeUf7jYVDR0"
+                <a href="https://www.youtube.com/watch?v=phzo_e5jMTU"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -102,7 +103,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/RIVeR-LAB/quadruped_mpc"
+                <a href="https://github.com/RIVeR-Lab/Stochastic-MPPI"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -118,6 +119,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -140,7 +143,31 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-steve">
           <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/grass.mp4"
+            <source src="./static/videos/obstacle_avoidance.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/circle_tracking.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/unicycle.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/edd5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/gp.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -168,7 +195,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/EeUf7jYVDR0?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/phzo_e5jMTU?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -177,44 +204,59 @@
   </div>
 </section>
 
+<style>
+  .video-grid-two-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Two columns */
+      gap: 10px; /* Gap between videos */
+      width: 60%; /* Set the container width to 60% */
+      margin: 0 auto; /* Center the container horizontally */
+  }
 
-<!-- <section class="section">
-  <div class="container is-max-desktop">
+  .video-grid-two-cols video {
+      width: 100%; /* Videos fill the container width */
+      height: auto;
+  }
+</style>
 
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Comparison</h2>
-
-        
-        <div class="content has-text-justified">
-          <p>
-            The below interactive demo shows time v/s COM Height plot for quadruped running LMPC and SMPC. It is evident that when quadruped is subjected to uncertain mass (6kgs) in this case, CCMPC is able to track height constantly whereas LMPC fails.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-        </div>
-        <br/>
-
-
-      </div>
-    </div>
-
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3"> Failure Cases</h2>
   </div>
-</section> -->
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+              <p>To-Do </p>
+        </div>
+      </div>
+  </div>
+</div>
+  <br>
+  <div class="video-grid-two-cols">
+      <div>
+          <video class="carousel-video" controls muted loop playsinline poster="static/images/posterpng.png" data-src="static/videos/unicycle_comparison.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video class="carousel-video" controls muted loop playsinline poster="static/images/posterpng.png" data-src="static/videos/edd5_comparison.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+        <video class="carousel-video" controls muted loop playsinline poster="static/images/posterpng.png" data-src="static/videos/gp_comparison.mp4" type="video/mp4">
+        </video>
+    </div>
+  </div>
+</section>
+
+
+<br>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code></code></pre>
+    <pre><code>To-Do</code></pre>
   </div>
 </section>
 
@@ -223,10 +265,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/assets/ccmpc.pdf">
+         href="./static/assets/SMPPI.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/RIVeR-LAB/quadruped_mpc" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/RIVeR-Lab/Stochastic-MPPI" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
